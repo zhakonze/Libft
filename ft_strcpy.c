@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *scr)
+char	*ft_strcpy(char *dest, const char *scr)
 {
 	int	i;
 
