@@ -14,8 +14,8 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *mem;
-
+	void *mem; // reason for making it a void is bacause at this point we 
+		   //don't know what datatype will be passed.
 	mem = malloc(size);
 	if (!mem)
 		return (NULL);
