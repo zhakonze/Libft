@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)// Function converts an lower case char to its corresponding
-{					 // upper case if at all  it has one.
-	if (c >= 'a' && c <= 'z')// the if statement will check through the string
-		return (c - 32);// for any lower case letter and convert it to upper
-	return (c);// if not an lower case char, the char remains 
-}			   // unchanged.
-
-// we take an int as a argument so its easy to do basic subtraction, as we know a 
-// computer does underneath the hood store characters as numbers --> man ascii.
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}

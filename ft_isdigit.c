@@ -17,5 +17,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-// we take an int as a argument because as we know a 
-// computer does underneath the hood store characters as numbers --> man ascii.

@@ -6,31 +6,58 @@
 /*   By: zhakonze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 10:00:10 by zhakonze          #+#    #+#             */
-/*   Updated: 2017/06/09 14:15:39 by zhakonze         ###   ########.fr       */
+/*   Updated: 2017/06/22 09:05:11 by zhakonze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static size_t		ft_trmlen(char *s)
 {
-	char			*str;
-	unsigned int	i;
+	size_t			i;
+	size_t			spac;
 	size_t			len;
 
-	if (!s)
-		return ("");
+	len = ft_strlen(s);
 	i = 0;
-	len = ft_strlen(s) - 1;
-	while (s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	if (s[i] == '\0')
-		return ("");
-	while (s[len] && (s[len] == ' ' || s[len] == '\n' || s[len] == '\t'))
-		len--;
-	len++;
-	str = (char *)ft_memalloc((len - i) + 1);
-	if (str)
-		str = ft_strsub(s, i, len - i);
+	spac = i;
+	if (s[i] != '\0')
+	{
+		i = len - 1;
+		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		{
+			i--;
+			spac++;
+		}
+	}
+	return (len - spac);
+}
+
+char				*ft_strtrim(char const *s)
+{
+	char			*str;
+	size_t			i;
+	size_t			a;
+	size_t			trmln;
+
+	i = 0;
+	a = 0;
+	if (!s)
+		return (NULL);
+	trmln = ft_trmlen((char *)s);
+	str = (char *)malloc(sizeof(*str) * (trmln + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		i++;
+	while (a < trmln)
+	{
+		str[a] = s[i];
+		a++;
+		i++;
+	}
+	str[a] = '\0';
 	return (str);
 }

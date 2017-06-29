@@ -27,5 +27,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	b = p;
 	return ((void *)b);
 }
-// if an argument is void it mean it can be a char, int etc..so make sure u
-// specify by typecasting.

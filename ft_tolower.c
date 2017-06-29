@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)// Function converts an upper case char to its corresponding
-{					 // lower case if at all  it has one.
-	if (c >= 'A' && c <= 'Z')// the if statement will check through the string
-		return (c + 32);	 // for any upper case letter and convert it to lower
-	return (c);				// if not an upper case char, the char remains 
-}							// unchanged.
-
-// we take an int as a argument so its easy to do basic addition, as we know a 
-// computer does underneath the hood store characters as numbers --> man ascii.
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}

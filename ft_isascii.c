@@ -12,10 +12,8 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)// the if statement checks if the character entered
-		return (1); // does appear as a vaule on the Decimal ascii table, if yes it
-	else			// returns 1 if not the code stops and returns a 0.
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
 		return (0);
 }
-// we take an int as a argument because as we know a 
-// computer does underneath the hood store characters as numbers --> man ascii.

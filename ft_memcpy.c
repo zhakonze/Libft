@@ -6,7 +6,7 @@
 /*   By: zhakonze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 15:24:40 by zhakonze          #+#    #+#             */
-/*   Updated: 2017/06/03 14:04:37 by zhakonze         ###   ########.fr       */
+/*   Updated: 2017/06/21 15:16:48 by zhakonze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,17 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*sour;
+	char		*src2;
+	char		*dst2;
+	size_t		i;
 
+	src2 = (char *)src;
+	dst2 = (char *)dst;
 	i = 0;
-	dest = (unsigned char *)dst;
-	sour = (unsigned char *)src;
-	if (n == 0 || dest == sour)
-		return (dest);
-	while (sour[i] && i < n)
+	while (i < n)
 	{
-		dest[i] = sour[i];
+		dst2[i] = src2[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return ((void *)dst2);
 }
-// this function is just the same as ft_strcpy, only that we have to type cast the void
-// arguments.

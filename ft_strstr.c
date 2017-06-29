@@ -6,7 +6,7 @@
 /*   By: zhakonze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 14:54:07 by zhakonze          #+#    #+#             */
-/*   Updated: 2017/06/07 14:22:20 by zhakonze         ###   ########.fr       */
+/*   Updated: 2017/06/21 14:41:59 by zhakonze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strstr(const char *s1, const char *s2)
 {
-	int		loop1;
-	int		loop2;
+	size_t		loop1;
+	size_t		loop2;
 
 	if (ft_strlen(s2) == 0)
 		return ((char*)s1);

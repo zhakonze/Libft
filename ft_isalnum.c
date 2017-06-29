@@ -14,10 +14,8 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isdigit(c) || ft_isalpha(c))// the if statements just checks if the value
-		return (1);// entered is a digit('0' - '9') or alpha ('a\A' - 'z\Z'), if yes
-	else			// it return 1, else it returns a 0.
+	if (ft_isdigit(c) || ft_isalpha(c))
+		return (1);
+	else
 		return (0);
 }
-// we take an int as a argument because as we know a 
-// computer does underneath the hood store characters as numbers --> man ascii.

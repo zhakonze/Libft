@@ -6,7 +6,7 @@
 /*   By: zhakonze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 15:36:47 by zhakonze          #+#    #+#             */
-/*   Updated: 2017/06/07 10:13:47 by zhakonze         ###   ########.fr       */
+/*   Updated: 2017/06/22 09:42:45 by zhakonze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_strclr(char *s)
 {
-	ft_memset(s, '\0', ft_strlen(s));
+	if (s)
+	{
+		ft_bzero(s, ft_strlen(s));
+	}
 }

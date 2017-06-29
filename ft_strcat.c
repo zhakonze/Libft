@@ -19,10 +19,10 @@ char	*ft_strcat(char *dest, const char *src)
 	j = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[j] != '\0')// in this while loop we don't increament i as that was 
-	{					  // already done in the above while loop, so all we have 
-		dest[i + j] = src[j];// to do now is just join the other string...by 
-		j++;				//increamenting the counter for source.
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
 	}
 	dest[i + j] = '\0';
 	return (dest);

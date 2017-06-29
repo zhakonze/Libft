@@ -16,5 +16,3 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-// if an argument is void it means it can be a char, int etc..so make sure u
-// specify by typecasting.
